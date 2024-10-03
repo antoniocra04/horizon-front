@@ -6,7 +6,7 @@ import { RegisterPage } from './pages/register';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/login',
     element: <LoginPage />
   },
   {
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     element: <RegisterPage />
   },
   {
-    path: '/main',
+    path: '/',
     element: <MainPage />
   }
 ]);

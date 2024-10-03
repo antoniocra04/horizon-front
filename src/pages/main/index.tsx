@@ -2,15 +2,7 @@
 
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import {
-  CheckCircleIcon,
-  KeyIcon,
-  LockIcon,
-  Mountain,
-  RefreshCwIcon,
-  ShieldIcon,
-  UserIcon
-} from 'lucide-react';
+import { CheckCircleIcon, KeyIcon, RefreshCwIcon, ShieldIcon, UserIcon } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -41,22 +33,20 @@ export const MainPage = () => {
       >
         <div className='container flex items-center justify-between'>
           <Link href='/' className='flex items-center justify-center'>
-            <Mountain className='h-6 w-6' />
-            <span className='sr-only'>Horizon</span>
+            <img src='/logo.png' alt='Логотип Горизонт' className='h-12 w-auto' />
+            <span className='text-xl font-semibold'>Горизонт</span>
           </Link>
-          <nav className='flex gap-4 sm:gap-6'>
+          <nav className='flex gap-4 sm:gap-6 items-center'>
             <Link href='#' className='text-sm font-medium hover:underline underline-offset-4'>
-              Features
+              Функции
             </Link>
             <Link href='#' className='text-sm font-medium hover:underline underline-offset-4'>
-              Pricing
+              Цены
             </Link>
             <Link href='#' className='text-sm font-medium hover:underline underline-offset-4'>
-              About
+              О нас
             </Link>
-            <Link href='#' className='text-sm font-medium hover:underline underline-offset-4'>
-              Contact
-            </Link>
+            <Button>Получить API ключ</Button>
           </nav>
         </div>
       </motion.header>
@@ -66,25 +56,26 @@ export const MainPage = () => {
             <div className='grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16'>
               <motion.div {...fadeIn}>
                 <h1 className='lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]'>
-                  User security is in our hands
+                  Безопасность пользователей в наших руках
                 </h1>
               </motion.div>
               <motion.div className='flex flex-col items-start space-y-4' {...fadeIn}>
                 <p className='max-w-[700px] text-muted-foreground md:text-xl'>
-                  Stop worrying about security and trust us. We know what we're doing, unlike you.
+                  Перестаньте беспокоиться о безопасности и доверьтесь нам. Мы знаем, что делаем, в
+                  отличие от вас.
                 </p>
                 <div className='space-x-4'>
                   <Link
                     href='/'
                     className='inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
                   >
-                    Connect System
+                    Подключить систему
                   </Link>
                   <Link
                     href='/'
                     className='inline-flex h-9 items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
                   >
-                    Contact Us
+                    Связаться с нами
                   </Link>
                 </div>
               </motion.div>
@@ -96,8 +87,8 @@ export const MainPage = () => {
               className='flex justify-center'
             >
               <img
-                src='/placeholder.svg'
-                alt='Hero'
+                src='/lock.png'
+                alt='Герой'
                 className='aspect-[3/1] w-full max-w-[1300px] overflow-hidden rounded-t-xl object-cover'
               />
             </motion.div>
@@ -111,15 +102,15 @@ export const MainPage = () => {
             >
               <div className='space-y-2'>
                 <div className='inline-block rounded-lg bg-muted px-3 py-1 text-sm'>
-                  New Features
+                  Новые функции
                 </div>
                 <h2 className='text-3xl font-bold tracking-tighter sm:text-5xl'>
-                  Faster iteration. More innovation.
+                  Быстрее итерации. Больше инноваций.
                 </h2>
                 <p className='max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
-                  The platform for rapid progress. Let your team focus on shipping features instead
-                  of managing infrastructure with automated CI/CD, built-in testing, and integrated
-                  collaboration.
+                  Платформа для быстрого прогресса. Позвольте вашей команде сосредоточиться на
+                  доставке функций вместо управления инфраструктурой с автоматизированным CI/CD,
+                  встроенным тестированием и интегрированным сотрудничеством.
                 </p>
               </div>
             </motion.div>
@@ -132,34 +123,34 @@ export const MainPage = () => {
             >
               {[
                 {
-                  title: 'Infinite scalability, zero config',
+                  title: 'Бесконечная масштабируемость, нулевая конфигурация',
                   description:
-                    'Enable code to run on-demand without needing to manage your own infrastructure or upgrade hardware.'
+                    'Позволяет коду работать по требованию без необходимости управлять собственной инфраструктурой или обновлять оборудование.'
                 },
                 {
-                  title: 'Real-time insights and controls',
+                  title: 'Аналитика и управление в реальном времени',
                   description:
-                    'Get granular, first-party, real-user metrics on site performance per deployment.'
+                    'Получайте детальные метрики производительности сайта от реальных пользователей для каждого развертывания.'
                 },
                 {
-                  title: 'Personalization at the edge',
+                  title: 'Персонализация на границе',
                   description:
-                    'Deliver dynamic, personalized content, while ensuring users only see the best version of your site.'
+                    'Доставляйте динамический, персонализированный контент, обеспечивая при этом, чтобы пользователи видели только лучшую версию вашего сайта.'
                 },
                 {
-                  title: 'Real-time insights and controls',
+                  title: 'Аналитика и управление в реальном времени',
                   description:
-                    'Get granular, first-party, real-user metrics on site performance per deployment.'
+                    'Получайте детальные метрики производительности сайта от реальных пользователей для каждого развертывания.'
                 },
                 {
-                  title: 'Personalization at the edge',
+                  title: 'Персонализация на границе',
                   description:
-                    'Deliver dynamic, personalized content, while ensuring users only see the best version of your site.'
+                    'Доставляйте динамический, персонализированный контент, обеспечивая при этом, чтобы пользователи видели только лучшую версию вашего сайта.'
                 },
                 {
-                  title: 'Infinite scalability, zero config',
+                  title: 'Бесконечная масштабируемость, нулевая конфигурация',
                   description:
-                    'Enable code to run on-demand without needing to manage your own infrastructure or upgrade hardware.'
+                    'Позволяет коду работать по требованию без необходимости управлять собственной инфраструктурой или обновлять оборудование.'
                 }
               ].map((feature, index) => (
                 <motion.div key={index} className='grid gap-1' variants={fadeIn}>
@@ -176,13 +167,13 @@ export const MainPage = () => {
                 href='#'
                 className='inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
               >
-                Contact Sales
+                Связаться с отделом продаж
               </Link>
               <Link
                 href='#'
                 className='inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
               >
-                Tour the Platform
+                Тур по платформе
               </Link>
             </motion.div>
           </div>
@@ -194,22 +185,22 @@ export const MainPage = () => {
           >
             <div className='space-y-3'>
               <h2 className='text-3xl font-bold tracking-tighter md:text-4xl/tight'>
-                Experience the workflow the best frontend teams love.
+                Испытайте рабочий процесс, который любят лучшие фронтенд-команды.
               </h2>
               <p className='mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
-                Let your team focus on shipping features instead of managing infrastructure with
-                automated CI/CD.
+                Позвольте вашей команде сосредоточиться на доставке функций вместо управления
+                инфраструктурой с автоматизированным CI/CD.
               </p>
             </div>
             <div className='mx-auto w-full max-w-sm space-y-2'>
               <form className='flex gap-2'>
-                <Input type='email' placeholder='Enter your email' className='max-w-lg flex-1' />
-                <Button type='submit'>Sign Up</Button>
+                <Input type='email' placeholder='Введите ваш email' className='max-w-lg flex-1' />
+                <Button type='submit'>Подписаться</Button>
               </form>
               <p className='text-xs text-muted-foreground'>
-                Sign up to get notified when we launch.{' '}
+                Подпишитесь, чтобы получать уведомления о нашем запуске.{' '}
                 <Link href='/terms' className='underline underline-offset-2'>
-                  Terms &amp; Conditions
+                  Условия и положения
                 </Link>
               </p>
             </div>
@@ -223,15 +214,15 @@ export const MainPage = () => {
             >
               <div className='space-y-2'>
                 <div className='inline-block rounded-lg bg-muted px-3 py-1 text-sm'>
-                  New Features
+                  Новые функции
                 </div>
                 <h2 className='text-3xl font-bold tracking-tighter sm:text-5xl'>
-                  Faster iteration. More innovation.
+                  Быстрее итерации. Больше инноваций.
                 </h2>
                 <p className='max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
-                  The platform for rapid progress. Let your team focus on shipping features instead
-                  of managing infrastructure with automated CI/CD, built-in testing, and integrated
-                  collaboration.
+                  Платформа для быстрого прогресса. Позвольте вашей команде сосредоточиться на
+                  доставке функций вместо управления инфраструктурой с автоматизированным CI/CD,
+                  встроенным тестированием и интегрированным сотрудничеством.
                 </p>
               </div>
             </motion.div>
@@ -243,8 +234,8 @@ export const MainPage = () => {
                 viewport={{ once: true }}
               >
                 <img
-                  src='/placeholder.svg'
-                  alt='Image'
+                  src='/lock.png'
+                  alt='Изображение'
                   className='mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last'
                 />
               </motion.div>
@@ -258,25 +249,26 @@ export const MainPage = () => {
                 <ul className='grid gap-6'>
                   <motion.li variants={fadeIn}>
                     <div className='grid gap-1'>
-                      <h3 className='text-xl font-bold'>Collaboration</h3>
+                      <h3 className='text-xl font-bold'>Сотрудничество</h3>
                       <p className='text-muted-foreground'>
-                        Make collaboration seamless with built-in code review tools.
+                        Сделайте сотрудничество беспрепятственным с встроенными инструментами
+                        проверки кода.
                       </p>
                     </div>
                   </motion.li>
                   <motion.li variants={fadeIn}>
                     <div className='grid gap-1'>
-                      <h3 className='text-xl font-bold'>Automation</h3>
+                      <h3 className='text-xl font-bold'>Автоматизация</h3>
                       <p className='text-muted-foreground'>
-                        Automate your workflow with continuous integration.
+                        Автоматизируйте ваш рабочий процесс с непрерывной интеграцией.
                       </p>
                     </div>
                   </motion.li>
                   <motion.li variants={fadeIn}>
                     <div className='grid gap-1'>
-                      <h3 className='text-xl font-bold'>Scale</h3>
+                      <h3 className='text-xl font-bold'>Масштабирование</h3>
                       <p className='text-muted-foreground'>
-                        Deploy to the cloud with a single click and scale with ease.
+                        Разверните в облаке одним кликом и масштабируйтесь с легкостью.
                       </p>
                     </div>
                   </motion.li>
@@ -292,11 +284,11 @@ export const MainPage = () => {
           >
             <div className='space-y-2'>
               <h2 className='text-3xl font-bold tracking-tighter md:text-4xl/tight'>
-                Experience the workflow the best frontend teams love.
+                Испытайте рабочий процесс, который любят лучшие фронтенд-команды.
               </h2>
               <p className='max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
-                Let your team focus on shipping features instead of managing infrastructure with
-                automated CI/CD.
+                Позвольте вашей команде сосредоточиться на доставке функций вместо управления
+                инфраструктурой с автоматизированным CI/CD.
               </p>
             </div>
             <div className='flex gap-4 justify-center lg:justify-end'>
@@ -304,136 +296,16 @@ export const MainPage = () => {
                 href='#'
                 className='inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
               >
-                Contact Sales
+                Связаться с отделом продаж
               </Link>
               <Link
                 href='#'
                 className='inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
               >
-                Learn more
+                Узнать больше
               </Link>
             </div>
           </motion.div>
-        </section>
-        <section className='w-full py-12 md:py-24 lg:py-32'>
-          <div className='container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10'>
-            <motion.div className='space-y-3' {...fadeIn}>
-              <h2 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>
-                Meet our Customers
-              </h2>
-              <p className='mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
-                Trusted by the best teams in the world. We help teams of all sizes.
-              </p>
-            </motion.div>
-            <motion.div
-              className='mx-auto max-w-5xl divide-y rounded-lg border'
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className='grid w-full grid-cols-3 items-stretch justify-center divide-x md:grid-cols-3'>
-                <div className='mx-auto flex w-full items-center justify-center p-4 sm:p-8'>
-                  <img
-                    src='/placeholder-logo.svg'
-                    alt='Logo'
-                    className='aspect-[2/1] overflow-hidden rounded-lg object-contain object-center'
-                  />
-                </div>
-                <div className='mx-auto flex w-full items-center justify-center p-4 sm:p-8'>
-                  <img
-                    src='/placeholder-logo.svg'
-                    alt='Logo'
-                    className='aspect-[2/1] overflow-hidden rounded-lg object-contain object-center'
-                  />
-                </div>
-                <div className='mx-auto flex w-full items-center justify-center p-8'>
-                  <img
-                    src='/placeholder-logo.svg'
-                    alt='Logo'
-                    className='aspect-[2/1] overflow-hidden rounded-lg object-contain object-center'
-                  />
-                </div>
-              </div>
-              <div className='grid w-full grid-cols-3 items-stretch justify-center divide-x md:grid-cols-3'>
-                <div className='mx-auto flex w-full items-center justify-center p-4 sm:p-8'>
-                  <img
-                    src='/placeholder-logo.svg'
-                    alt='Logo'
-                    className='aspect-[2/1] overflow-hidden rounded-lg object-contain object-center'
-                  />
-                </div>
-                <div className='mx-auto flex w-full items-center justify-center p-4 sm:p-8'>
-                  <img
-                    src='/placeholder-logo.svg'
-                    alt='Logo'
-                    className='aspect-[2/1] overflow-hidden rounded-lg object-contain object-center'
-                  />
-                </div>
-                <div className='mx-auto flex w-full items-center justify-center p-4 sm:p-8'>
-                  <img
-                    src='/placeholder-logo.svg'
-                    alt='Logo'
-                    className='aspect-[2/1] overflow-hidden rounded-lg object-contain object-center'
-                  />
-                </div>
-              </div>
-            </motion.div>
-            <motion.div className='flex justify-center space-x-4' {...fadeIn}>
-              <Link
-                href='#'
-                className='inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
-              >
-                Contact Sales
-              </Link>
-              <Link
-                href='#'
-                className='inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
-              >
-                Learn more
-              </Link>
-            </motion.div>
-          </div>
-        </section>
-        <section className='w-full py-12 md:py-24 lg:py-32 border-t'>
-          <div className='container mx-auto px-4 md:px-6'>
-            <motion.div
-              className='grid gap-10 px-10 md:gap-16 lg:grid-cols-2'
-              variants={staggerChildren}
-              initial='initial'
-              whileInView='animate'
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <motion.div className='space-y-4' variants={fadeIn}>
-                <div className='inline-block rounded-lg bg-muted px-3 py-1 text-sm'>
-                  Performance
-                </div>
-                <h2 className='lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]'>
-                  Traffic spikes should be exciting, not scary.
-                </h2>
-                <Link
-                  href='#'
-                  className='inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
-                >
-                  Get Started
-                </Link>
-              </motion.div>
-              <motion.div className='flex flex-col items-start space-y-4' variants={fadeIn}>
-                <div className='inline-block rounded-lg bg-muted px-3 py-1 text-sm'>Security</div>
-                <p className='max-w-[700px] text-muted-foreground md:text-xl/relaxed'>
-                  Fully managed infrastructure designed to scale dynamically with your traffic, a
-                  global edge to ensure your site is fast for every customer, and the tools to
-                  monitor every aspect of your app.
-                </p>
-                <Link
-                  href='#'
-                  className='inline-flex h-9 items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
-                >
-                  Contact Sales
-                </Link>
-              </motion.div>
-            </motion.div>
-          </div>
         </section>
       </main>
       <motion.footer
@@ -444,14 +316,14 @@ export const MainPage = () => {
         viewport={{ once: true }}
       >
         <p className='text-xs text-center text-muted-foreground'>
-          © {new Date().getFullYear()} Horizon. All rights reserved.
+          © {new Date().getFullYear()} Горизонт. Все права защищены.
         </p>
         <nav className='flex gap-4 sm:gap-6'>
           <Link href='#' className='text-xs hover:underline underline-offset-4'>
-            Terms of Service
+            Условия обслуживания
           </Link>
           <Link href='#' className='text-xs hover:underline underline-offset-4'>
-            Privacy
+            Конфиденциальность
           </Link>
         </nav>
       </motion.footer>
