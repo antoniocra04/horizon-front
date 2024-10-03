@@ -1,3 +1,5 @@
+// eslint-disable-next-line eslint-comments/disable-enable-pair
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -27,7 +29,7 @@ export const RegisterPage = () => {
     e.preventDefault();
     setError('');
 
-    if (!name || !email || !password || !confirmPassword) {
+    if (!email || !password || !confirmPassword) {
       setError('Please fill in all fields');
       return;
     }
@@ -37,7 +39,7 @@ export const RegisterPage = () => {
       return;
     }
 
-    console.log('Registration attempt with:', { name, email, password });
+    console.log('Registration attempt with:', { email, password });
   };
 
   return (

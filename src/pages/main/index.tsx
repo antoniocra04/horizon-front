@@ -1,17 +1,18 @@
+// eslint-disable-next-line eslint-comments/disable-enable-pair
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 'use client';
 
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { CheckCircleIcon, KeyIcon, RefreshCwIcon, ShieldIcon, UserIcon } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
+  transition: {}
 };
 
 const staggerChildren = {
@@ -32,18 +33,18 @@ export const MainPage = () => {
         className='px-4 lg:px-6 h-14 flex items-center justify-center'
       >
         <div className='container flex items-center justify-between'>
-          <Link href='/' className='flex items-center justify-center'>
+          <Link to='/' className='flex items-center justify-center'>
             <img src='/logo.png' alt='Логотип Горизонт' className='h-12 w-auto' />
             <span className='text-xl font-semibold'>Горизонт</span>
           </Link>
           <nav className='flex gap-4 sm:gap-6 items-center'>
-            <Link href='#' className='text-sm font-medium hover:underline underline-offset-4'>
+            <Link to='#' className='text-sm font-medium hover:underline underline-offset-4'>
               Функции
             </Link>
-            <Link href='#' className='text-sm font-medium hover:underline underline-offset-4'>
+            <Link to='#' className='text-sm font-medium hover:underline underline-offset-4'>
               Цены
             </Link>
-            <Link href='#' className='text-sm font-medium hover:underline underline-offset-4'>
+            <Link to='#' className='text-sm font-medium hover:underline underline-offset-4'>
               О нас
             </Link>
             <Button>Получить API ключ</Button>
@@ -66,13 +67,13 @@ export const MainPage = () => {
                 </p>
                 <div className='space-x-4'>
                   <Link
-                    href='/'
+                    to='/'
                     className='inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
                   >
                     Подключить систему
                   </Link>
                   <Link
-                    href='/'
+                    to='/'
                     className='inline-flex h-9 items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
                   >
                     Связаться с нами
@@ -164,13 +165,13 @@ export const MainPage = () => {
               {...fadeIn}
             >
               <Link
-                href='#'
+                to='#'
                 className='inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
               >
                 Связаться с отделом продаж
               </Link>
               <Link
-                href='#'
+                to='#'
                 className='inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
               >
                 Тур по платформе
@@ -199,7 +200,7 @@ export const MainPage = () => {
               </form>
               <p className='text-xs text-muted-foreground'>
                 Подпишитесь, чтобы получать уведомления о нашем запуске.{' '}
-                <Link href='/terms' className='underline underline-offset-2'>
+                <Link to='/terms' className='underline underline-offset-2'>
                   Условия и положения
                 </Link>
               </p>
@@ -293,13 +294,13 @@ export const MainPage = () => {
             </div>
             <div className='flex gap-4 justify-center lg:justify-end'>
               <Link
-                href='#'
+                to='#'
                 className='inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
               >
                 Связаться с отделом продаж
               </Link>
               <Link
-                href='#'
+                to='#'
                 className='inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
               >
                 Узнать больше
@@ -319,10 +320,10 @@ export const MainPage = () => {
           © {new Date().getFullYear()} Горизонт. Все права защищены.
         </p>
         <nav className='flex gap-4 sm:gap-6'>
-          <Link href='#' className='text-xs hover:underline underline-offset-4'>
+          <Link to='#' className='text-xs hover:underline underline-offset-4'>
             Условия обслуживания
           </Link>
-          <Link href='#' className='text-xs hover:underline underline-offset-4'>
+          <Link to='#' className='text-xs hover:underline underline-offset-4'>
             Конфиденциальность
           </Link>
         </nav>
