@@ -34,7 +34,7 @@ export const MainPage = () => {
       >
         <div className='container flex items-center justify-between'>
           <Link to='/' className='flex items-center justify-center'>
-            <img src='/logo.png' alt='Логотип Горизонт' className='h-12 w-auto' />
+            <img src='/logo.webp' alt='Логотип Горизонт' className='h-12 w-auto' />
             <span className='text-xl font-semibold'>Горизонт</span>
           </Link>
           <nav className='flex gap-4 sm:gap-6 items-center'>
@@ -88,7 +88,7 @@ export const MainPage = () => {
               className='flex justify-center'
             >
               <img
-                src='/lock.png'
+                src='/lock.webp'
                 alt='Герой'
                 className='aspect-[3/1] w-full max-w-[1300px] overflow-hidden rounded-t-xl object-cover'
               />
@@ -235,7 +235,7 @@ export const MainPage = () => {
                 viewport={{ once: true }}
               >
                 <img
-                  src='/lock.png'
+                  src='/lock.webp'
                   alt='Изображение'
                   className='mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last'
                 />
