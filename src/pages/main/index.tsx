@@ -6,6 +6,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
+import { Header } from '@/components/header';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
@@ -26,31 +27,7 @@ const staggerChildren = {
 export const MainPage = () => {
   return (
     <div className='flex flex-col min-h-[100dvh]'>
-      <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ type: 'spring', stiffness: 100 }}
-        className='px-4 lg:px-6 h-14 flex items-center justify-center'
-      >
-        <div className='container flex items-center justify-between'>
-          <Link to='/' className='flex items-center justify-center'>
-            <img src='/logo.webp' alt='Логотип Горизонт' className='h-12 w-auto' />
-            <span className='text-xl font-semibold'>Горизонт</span>
-          </Link>
-          <nav className='flex gap-4 sm:gap-6 items-center'>
-            <Link to='#' className='text-sm font-medium hover:underline underline-offset-4'>
-              Функции
-            </Link>
-            <Link to='#' className='text-sm font-medium hover:underline underline-offset-4'>
-              Цены
-            </Link>
-            <Link to='#' className='text-sm font-medium hover:underline underline-offset-4'>
-              О нас
-            </Link>
-            <Button>Получить API ключ</Button>
-          </nav>
-        </div>
-      </motion.header>
+      <Header />
       <main className='flex-1'>
         <section className='w-full pt-12 md:pt-24 lg:pt-32 border-y'>
           <div className='container mx-auto px-4 md:px-6 space-y-10 xl:space-y-16'>
