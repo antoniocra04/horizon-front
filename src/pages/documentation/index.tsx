@@ -2,10 +2,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, ChevronRight, Github, Menu, Search, Twitter } from 'lucide-react';
+import { ChevronDown, ChevronRight, Github, Menu } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
 export const DocumentationPage = () => {
@@ -46,17 +45,10 @@ export const DocumentationPage = () => {
             </Link>
           </div>
           <div className='hidden md:flex items-center space-x-4'>
-            <div className='relative'>
-              <Search className='absolute left-2.5 top-2.5 h-4 w-4 text-neutral-500' />
-              <Input type='search' placeholder='Search documentation...' className='pl-8 w-64' />
-            </div>
+            <Button>Получить API ключ</Button>
             <Button variant='ghost' size='icon'>
               <Github className='h-5 w-5' />
               <span className='sr-only'>GitHub</span>
-            </Button>
-            <Button variant='ghost' size='icon'>
-              <Twitter className='h-5 w-5' />
-              <span className='sr-only'>Twitter</span>
             </Button>
           </div>
         </div>
