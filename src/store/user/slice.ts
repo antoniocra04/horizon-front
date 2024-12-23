@@ -2,20 +2,12 @@ import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
 import { type RootState } from '../index';
 
-interface Project {
-  id: 0;
-  name: 'string';
-  description: 'string';
-  createdAt: '2024-09-28T11:39:06.653Z';
-}
 interface UserState {
   token: string;
-  projects: Project[];
 }
 
 const initialState: UserState = {
-  token: '',
-  projects: []
+  token: ''
 };
 
 export const userSlice = createSlice({
@@ -24,9 +16,6 @@ export const userSlice = createSlice({
   reducers: {
     setUser: (state, action: PayloadAction<string>) => {
       state.token = action.payload;
-    },
-    addProjects: (state, action: PayloadAction<Project[]>) => {
-      state.projects = action.payload;
     },
     logout: () => initialState
   }

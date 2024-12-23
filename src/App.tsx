@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import { PrivateRoute } from './components/privateRoute';
 import { ApiKeysPage } from './pages/apiKeys';
 import { DocumentationPage } from './pages/documentation';
 import { LoginPage } from './pages/login';
@@ -30,7 +31,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/api-keys',
-    element: <ApiKeysPage />
+    element: (
+      <PrivateRoute>
+        <ApiKeysPage />
+      </PrivateRoute>
+    )
   }
 ]);
 

@@ -17,6 +17,7 @@ import {
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { useRegistration } from '@/hooks/useRegistration';
 
 export const RegisterPage = () => {
   const [login, setLogin] = useState('');
@@ -24,6 +25,7 @@ export const RegisterPage = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
+  const register = useRegistration();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,10 +38,9 @@ export const RegisterPage = () => {
 
     if (password !== confirmPassword) {
       setError('Passwords do not match');
-      return;
     }
 
-    console.log('Registration attempt with:', { email, password });
+    register.mutate({ username: login, password, email });
   };
 
   return (
